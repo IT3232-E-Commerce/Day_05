@@ -4,11 +4,13 @@ public class Course {
 
 	private String cid;
 	private String cname;
+	private int credit;
 
-	public Course(String cid, String cname) {
+	public Course(String cid, String cname, int credit) {
 		super();
 		this.cid = cid;
 		this.cname = cname;
+		this.credit = credit;
 	}
 
 	public String getCid() {
@@ -25,5 +27,13 @@ public class Course {
 
 	public void setCname(String cname) {
 		this.cname = cname;
+	}
+
+	public int getCredit() {
+		return credit;
+	}
+
+	public void setCredit(int credit) {
+		this.credit = credit;
 	}
 }
