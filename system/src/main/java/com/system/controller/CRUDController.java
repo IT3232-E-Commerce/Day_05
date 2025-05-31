@@ -33,10 +33,10 @@ public class CRUDController<T, M> {
 	public M getById(@PathVariable("id") T id) {
 		return objects.get(id);
 	}
-	
-	@PostMapping("/")
-	public String add(@RequestBody M object) {
-		objects.put(null, object);
+
+	@PostMapping("/{id}")
+	public String add(@PathVariable("id") T id, @RequestBody M object) {
+		objects.put(id, object);
 		return "Object added";
 	}
 
